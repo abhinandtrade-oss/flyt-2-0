@@ -1,0 +1,25 @@
+# Cloudflare Pages Configuration
+name = "flyt-2-0"
+type = "javascript"
+compatibility_date = "2025-12-01"
+
+# Build configuration
+[build]
+command = ""
+dir = "."
+
+# Assets configuration for Pages
+[assets]
+directory = "."
+
+# Cloudflare Pages environment
+[env.pages]
+name = "flyt-2-0-pages"
+route = "*"
+vars = { ENVIRONMENT = "pages" }
+
+# Additional environment variables
+[env.production]
+name = "flyt-2-0"
+route = "flylighttoursandtravels.workers.dev"
+vars = { ENVIRONMENT = "production" }
